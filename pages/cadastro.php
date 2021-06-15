@@ -9,9 +9,8 @@
 </head>
 <body style="background-color:#30363d;">
   <div class="container mt-3 p-3">
-    <div class="row">
+    <div class="row"> 
       <div class="col-sm">
-
       </div>
       <div class="col-sm">
       <h4 style="color: white;">Sistema de Login - Prof.Pazito</h4><br>
