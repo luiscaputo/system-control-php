@@ -4,27 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/bootstrap.css">
   <title>login</title>
 </head>
-<body>
-  <div class="container">
+<body style="background-color:#30363d;">
+  <div class="container mt-3 p-3">
     <div class="row">
       <div class="col-sm">
 
       </div>
-      <div class="col-sm border">
-        <form action="" method="post" class="form-control">
-          <label for="user_name">Nome de Usuário <br> 
-              <input type="text" class="form-control" id="user_name" name="user_name"><br>
-          </label>
-          <label for="password">Senha <br> 
-              <input type="password" class="form-control" id="password" name="password"><br>
-          </label> <br>
-          <button class="btn button-sucess">Entrar</button>
+      <div class="col-sm">
+      <h4 style="color: white;">Sistema de Login - Prof.Pazito</h4><br>
+        <form action="" method="post" class="">
+              <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
+          <button class="btn btn-success form-control">Entrar</button>
         </form>
       </div>
       <div class="col-sm">
-
       </div>
     </div>
   </div>
