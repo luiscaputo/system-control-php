@@ -3,7 +3,7 @@ require_once '../core/conn.php';
   if(isset($_POST['btn'])){
     $nome = filter_input(INPUT_POST, 'user_name');
     $email = filter_input(INPUT_POST, 'email');
-    $senha = filter_input(INPUT_POST, 'senha');
+    $senha = md5(filter_input(INPUT_POST, 'senha'));
 
     $find_email = $pdo->prepare("SELECT * FROM users WHERE email = '$email'");
     $find_email->execute();
@@ -13,7 +13,13 @@ require_once '../core/conn.php';
     }
       else
       {
-        $guarda = $pdo
+        $guarda = $pdo->prepare("INSERT INTO users(name, senha, email) values ('$nome', '$senha', $email)");
+        $guarda->execute();
+        if($guarda->rowCount()>0){
+          echo "<script>alert('Cadastro Efectuado!')</script>";
+        }
+        else
+          echo "<script>alert('Cadastro não efectuado, tente novamente!')</script>";
       }
   }
 ?>
