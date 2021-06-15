@@ -16,7 +16,7 @@
       <h4 style="color: white;">Sistema de Login - Prof.Pazito</h4><br>
         <form action="" method="post" class="">
               <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
-              <input type="email" class="form-control" id="email" name="email" placeholder="email de usuário"><br>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email"><br>
               <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
           <button class="btn btn-success form-control">Cadastrar</button><br>
           <a href="../index.php">Se já tem conta, clica aqui!</a>
