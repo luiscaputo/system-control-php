@@ -19,7 +19,8 @@
           </label>
           <label for="password">Senha <br> 
               <input type="password" class="form-control" id="password" name="password"><br>
-          </label>
+          </label> <br>
+          <button class="btn button-sucess">Entrar</button>
         </form>
       </div>
       <div class="col-sm">
