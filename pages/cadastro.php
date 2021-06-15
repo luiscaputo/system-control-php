@@ -1,3 +1,11 @@
+<?php
+  if(isset($_POST['btn'])){
+    $nome = filter_input(INPUT_POST, 'user_name');
+    $email = filter_input(INPUT_POST, 'email');
+    $senha = filter_input(INPUT_POST, 'senha');
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +26,7 @@
               <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
               <input type="email" class="form-control" id="email" name="email" placeholder="Email"><br>
               <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
-          <button class="btn btn-success form-control">Cadastrar</button><br>
+          <button class="btn btn-success form-control" name="btn">Cadastrar</button><br>
           <a href="../index.php">Se já tem conta, clica aqui!</a>
         </form>
       </div>
