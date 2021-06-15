@@ -1,9 +1,20 @@
 <?php
+require_once '../core/conn.php';
   if(isset($_POST['btn'])){
     $nome = filter_input(INPUT_POST, 'user_name');
     $email = filter_input(INPUT_POST, 'email');
     $senha = filter_input(INPUT_POST, 'senha');
 
+    $find_email = $pdo->prepare("SELECT * FROM users WHERE email = '$email'");
+    $find_email->execute();
+
+    if($find_email->rowCount()>0){
+      echo "<script>alert('Já existe um usuário com este email!')</script>";
+    }
+      else
+      {
+        $guarda = $pdo
+      }
   }
 ?>
 <!DOCTYPE html>
