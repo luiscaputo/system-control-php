@@ -17,8 +17,8 @@
           <label for="user_name">Nome de Usuário <br> 
               <input type="text" class="form-control" id="user_name" name="user_name"><br>
           </label>
-          <label for="user_name">Senha <br> 
-              <input type="password" class="form-control" id="user_name" name="user_name"><br>
+          <label for="password">Senha <br> 
+              <input type="password" class="form-control" id="password" name="password"><br>
           </label>
         </form>
       </div>
