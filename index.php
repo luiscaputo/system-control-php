@@ -9,15 +9,15 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-sm">
 
       </div>
-      <div class="col border">
+      <div class="col-sm border">
         <form action="" method="post" class="form-control">
           
         </form>
       </div>
-      <div class="col">
+      <div class="col-sm">
 
       </div>
     </div>
