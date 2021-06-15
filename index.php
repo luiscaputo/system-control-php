@@ -14,7 +14,12 @@
       </div>
       <div class="col-sm border">
         <form action="" method="post" class="form-control">
-          
+          <label for="user_name">Nome de Usuário <br> 
+              <input type="text" class="form-control" id="user_name" name="user_name"><br>
+          </label>
+          <label for="user_name">Nome de Usuário <br> 
+              <input type="text" class="form-control" id="user_name" name="user_name"><br>
+          </label>
         </form>
       </div>
       <div class="col-sm">
