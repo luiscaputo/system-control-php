@@ -19,6 +19,16 @@
             if($find->rowCount()>0){
               $find_logs = $pdo->prepare("SELECT * FROM user_logs WHERE id_user = '$id'");
               $find_logs->execute();
+              $array_logs = $find_logs->fetch();
+              $existent_logs = $array_logs['logs_number'];  
+              $new_log = $existent_logs + 1;
+              $save_news_logs = $pdo->prepare("UPDATE SET logs_number = '$new_log' WHERE id = '$id'");
+              $save_news_logs->execute();
+              session_start();
+              $_SESSION['id_usuario'] = $id;
+              header('location: pages/home.php');      
+            }else{
+              
             }
         }
     }else
