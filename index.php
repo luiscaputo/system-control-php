@@ -22,7 +22,7 @@
               $array_logs = $find_logs->fetch();
               $existent_logs = $array_logs['logs_number'];  
               $new_log = $existent_logs + 1;
-              $save_news_logs = $pdo->prepare("UPDATE SET logs_number = '$new_log' WHERE id = '$id'");
+              $save_news_logs = $pdo->prepare("UPDATE user_logs SET logs_number = '$new_log' WHERE id = '$id'");
               $save_news_logs->execute();
               session_start();
               $_SESSION['id_usuario'] = $id;
