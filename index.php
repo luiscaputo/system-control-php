@@ -17,7 +17,8 @@
           $find = $pdo->prepare("SELECT * FROM users_acess WHERE id_user = '$id'");
           $find->execute();
             if($find->rowCount()>0){
-              
+              $find_logs = $pdo->prepare("SELECT * FROM user_logs WHERE id_user = '$id'");
+              $find_logs->execute();
             }
         }
     }else
