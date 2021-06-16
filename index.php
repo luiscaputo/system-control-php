@@ -14,7 +14,11 @@
       }else
         {
           $id = $array['id'];
-          $find = $pdo->prepare()
+          $find = $pdo->prepare("SELECT * FROM users_acess WHERE id_user = '$id'");
+          $find->execute();
+            if($find->rowCount()>0){
+              
+            }
         }
     }else
       {

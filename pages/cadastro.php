@@ -16,6 +16,10 @@ require_once '../core/conn.php';
         $guarda = $pdo->prepare("INSERT INTO users(name, senha, email) values ('$nome', '$senha', '$email')");
         $guarda->execute();
         if($guarda->rowCount()>0){
+          $v = $guarda->fetch();
+          $id = $v['id'];
+          $save_log = $pdo->prepare("INSERT INTO user_logs(id_user, logs_number) Values ('$id', '0')");
+          
           echo "<script>alert('Cadastro Efectuado!')</script>";
         }
         else
