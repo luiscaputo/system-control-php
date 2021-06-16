@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
         <form action="" method="post" class="">
               <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
               <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
-          <button class="btn btn-success form-control">Entrar</button><br>
+          <button class="btn btn-success form-control" name="btn">Entrar</button><br>
           <a href="pages/cadastro.php">Se não tem conta, clica aqui!</a>
         </form>
       </div>
