@@ -28,7 +28,7 @@
               $_SESSION['id_usuario'] = $id;
               header('location: pages/home.php');      
             }else{
-              
+              echo "<script>alert('Seu Cadastro foi efectuado mas ainda não tens acesso a HOME PAGE');</script>";
             }
         }
     }else
