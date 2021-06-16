@@ -2,7 +2,7 @@
   require_once 'core/conn.php';
   if(isset($_POST['btn'])){
     $email = filter_input(INPUT_POST, 'email');
-    $password = md5(filter_input(INPUT_POST, 'password'));
+    $password = filter_input(INPUT_POST, 'password');
 
     $sql = $pdo->prepare("SELECT * FROM users WHERE email = '$email'");
     $sql->execute();
