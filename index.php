@@ -1,4 +1,19 @@
+<?php
+  require_once 'core/conn.php';
+  if(isset($_POST['btn'])){
+    $email = filter_input(INPUT_POST, 'email');
+    $password = md5(filter_input(INPUT_POST, 'password'));
 
+    $sql = $pdo->prepare("SELECT * FROM users WHERE email = '$email'");
+    $sql->execute();
+    if($sql->rowCount() > 0){
+      $array = $sql->fetch();
+      $password = $array['senha'];
+      
+    }
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +32,8 @@
       <div class="col-sm">
       <h4 style="color: white;">Sistema de Login - Prof.Pazito</h4><br>
         <form action="" method="post" class="">
-              <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
+              <input type="email" class="form-control" id="user_name" name="email" placeholder="Email" required=""><br>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave" required=""><br>
           <button class="btn btn-success form-control" name="btn">Entrar</button><br>
           <a href="pages/cadastro.php">Se não tem conta, clica aqui!</a>
         </form>
