@@ -13,7 +13,7 @@ require_once '../core/conn.php';
     }
       else
       {
-        $guarda = $pdo->prepare("INSERT INTO users(name, senha, email) values ('$nome', '$senha', $email)");
+        $guarda = $pdo->prepare("INSERT INTO users(name, senha, email) values ('$nome', '$senha', '$email')");
         $guarda->execute();
         if($guarda->rowCount()>0){
           echo "<script>alert('Cadastro Efectuado!')</script>";
@@ -40,9 +40,9 @@ require_once '../core/conn.php';
       <div class="col-sm">
       <h4 style="color: white;">Sistema de Login - Prof.Pazito</h4><br>
         <form action="" method="post" class="">
-              <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário"><br>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Email"><br>
-              <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave"><br>
+              <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Nome de usuário" required=""><br>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required=""><br>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Palavra Chave" required=""><br>
           <button class="btn btn-success form-control" name="btn">Cadastrar</button><br>
           <a href="../index.php">Se já tem conta, clica aqui!</a>
         </form>

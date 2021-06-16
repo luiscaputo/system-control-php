@@ -2,7 +2,7 @@
 	$server 	= 	'localhost'	;
 	$userName 	= 	'root'		;
 	$password 	= 	''			;
-	$db_name 	= 	'control_system';
+	$db_name 	= 	'system_control';
     try {
         $pdo = new PDO("mysql:dbname=".$db_name."; host=".$server, $userName, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
