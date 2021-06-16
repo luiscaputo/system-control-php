@@ -8,9 +8,18 @@
     $sql->execute();
     if($sql->rowCount() > 0){
       $array = $sql->fetch();
-      $password = $array['senha'];
-      
-    }
+      $passKey = $array['senha'];
+      if($password != $passKey){
+        echo "<script>alert('Senha Errada');</script>";
+      }else
+        {
+          $id = $array['id'];
+          $find = $pdo->prepare()
+        }
+    }else
+      {
+        echo "<script>alert('Email não cadastrado');</script>";
+      }
 
   }
 ?>
